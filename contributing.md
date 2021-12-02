@@ -30,7 +30,7 @@ In order to prevent overwriting other members changes and keep everyone aware of
 [8. List of contributors(us).](#contributors)
 
 # <a name="importantLinks">Important Links:</a><br>
-Project Pages: https://lordforrester.github.io/hello-world/
+Project Pages: https://github.com/Eamon-Sheehy/Group3-Final
 
 # <a name="reportingBugs">Reporting Bugs:</a> <br>
 Bugs should be reported under the issues tab on the main repository and the contributos should be notified an issue has been reported via the group discord.
