@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Beginning Github Repository</title>
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+
+
+<main>
+
+    <p>Welcome to the guide!
+    We will be walking you through the process of installing an AWS server.</p>
+
+    <p>Begin by logging into you AWS account</p>
+
+    <p>Navigate to EC2</p>
+    <!-- probably an image --> 
+
+    <p>Select instances from the left panel</p>
+
+    <p>Select Launch instances</p>
+    <!-- probably an image --> 
+
+    <p>Scroll to Ubuntu Server 20.04</p>
+    <!-- probably an image --> 
+
+    <p>Select t2 (free tier in our case)</p>
+
+    <p>Select Review and Launch</p>
+    <!-- probably an image --> 
+
+    <p>Click Launch</p>
+
+    <p>Create new key pair, name the key someything memorable, click download. This will create a .pem file. Remember where you put it! We will use it later.</p>
+    <!-- probably an image --> 
+
+    <p>Click Launch, then View instances on the bottom right</p>
+
+    <p>click the checkbox next to your new server. In the window below under Public IPv4 address click the copy image. You can keep this page open just in case you loose your IP that is copied. We will need this later on in this guide</p>
+    <!-- probably an image --> 
+
+    <p>Success! You have gotten your server up and running! You can access it by inputting the IP address into your browser. Next you need to connect to it. For this we will use Putty.</p>
+
+    <p>install <a href="https://www.putty.org/">Putty</a>. You want the link at the top of the page.</p>
+
+    <p>open Puttygen. It should have been installed with the putty package.</p>
+
+    <p>click load</p>
+    <!-- probably an image --> 
+
+    <p>find your .pem file</p>
+
+    <p>click save private key</p>
+    <!-- probably an image --> 
+
+    <p>for simplicity name it the same as the .pem file</p>
+
+    <p>open Putty</p>
+
+    <p>on the left click the plus next to SSH, then click on Auth. Click browse and find the new .ppk file you created with puttygen.</p>
+    <!-- probably an image --> 
+
+    <p>Now click on session on the top left. under host name place your IP address for the server you created. Hopefully it is still copied! Click open, and okay the next dialog box.</p>
+    <!-- probably an image --> 
+
+    <p>Since we made the server using ubuntu, your user name is 'ubuntu'
+    a list to user names based on operating system is provided below.</p>
+    
+    
+    <p>For Amazon Linux 2 or the Amazon Linux AMI, the user name is ec2-user.</p>
+
+    <p>For a CentOS AMI, the user name is centos or ec2-user.</p>
+
+    <p>For a Debian AMI, the user name is admin.</p>
+
+    <p>For a Fedora AMI, the user name is fedora or ec2-user.</p>
+
+    <p>For a RHEL AMI, the user name is ec2-user or root.</p>
+
+    <p>For a SUSE AMI, the user name is ec2-user or root.</p>
+
+    <p>For an Ubuntu AMI, the user name is ubuntu.</p>
+
+    <p>For an Oracle AMI, the user name is ec2-user.</p>
+
+    <p>For a Bitnami AMI, the user name is bitnami.</p>
+
+
+
+
+    <p>Next we will install apache2</p>
+
+    <p>start with 'sudo apt update'</p>
+
+    <p>next, 'sudo apt install apache2'</p>
+    <!-- probably an image --> 
+
+    <p>restart and check the status of your apache2 server</p>
+
+    <p>'sudo systemctl restart apache2'</p>
+
+    <p>'sudo systelctl status apache2'</p>
+    <!-- probably an image --> 
+
+    <p>next we will navigate to your webroot folder</p>
+    
+    <p>type 'cd /var/www/html'</p>
+    <!-- probably an image --> 
+
+    <p>now you can clone your github project to this destination and see it in real time.</p>
+
+    <p>type 'sudo git clone 'github repo url''</p>
+    <!-- probably an image --> 
+
+    <p>if you navigate to your ip address that was assigned earlier and add / the name of your projects folder you will be taken to the page.</p>
+    <!-- probably an image --> 
+
+    <p>success!</p>
+
+
+    
+</main>
+
+</body>
+
+</html>
