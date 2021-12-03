@@ -19,35 +19,35 @@
     <p>Begin by logging into you AWS account</p>
 
     <p>From the management console, navigate to <b>Launch a virtual machine with EC2</b></p>
-    <br><img src="images/management_console.jpg">
+    <br><img src="images/management_console.jpg" alt="instructions-image-1">
 
     <p>Scroll down to to <b>Ubuntu Server 20.04</b> and click <b>select</b></p>
-    <br><img src="images/server_selection.jpg">
+    <br><img src="images/server_selection.jpg" alt="instructions-image-2">
 
     <p>Select t2 (free tier in our case)</p>
-    <br><img src="images/tier_selection.jpg">
+    <br><img src="images/tier_selection.jpg" alt="instructions-image-3">
 
     <p>Select <b>Review and Launch</b></p>
 
     <p>Click <b>Launch</b></p>
 
     <p>Create new key pair, name the key someything memorable, click <b>download</b>. This will create a .pem file. Remember where you put it! We will use it later.</p>
-    <br><img src="images/key_pair.jpg">
+    <br><img src="images/key_pair.jpg" alt="instructions-image-4">
 
     <p>Click <b>Launch</b>, then <b>View instances</b> on the bottom right.</p>
 
     <p>Click the checkbox next to your new server. In the window below under <b>Public IPv4 address</b> click the copy image. You can keep this page open just in case you loose your IP that is copied. We will need this later on in this guide</p>
-    <br><img src="images/IPv4_address.jpg">
+    <br><img src="images/IPv4_address.jpg" alt="instructions-image-5">
 
     <p>Next we will modify security settings to allow your server to be accessed. On the left hand panel navigate to <b>Security Groups.</b></p>
 
     <p>Click on the secuity group ID of the new server. Most likely it will be named <b>launch-wizard-1</b>.
 
     <p>On the top right click <b>actions</b> and select <b>inbound rules</b>.
-    <br><img src="images/actions.jpg">
+    <br><img src="images/actions.jpg" alt="instructions-image-6"> 
 
     <p> Click <b>add rule</b> then change custom TCP to <b>HTTP</b>. In the search bar to the right, select <b>0.0.0.0/0</b>, save the rules and we can move on!</p>
-    <br><img src="images/inbound_rules.jpg">
+    <br><img src="images/inbound_rules.jpg" alt="instructions-image-7">
 
 
     <p>Success! You have gotten your server up and running! You can access it by inputting the IP address into your browser. At the moment nothing will show up until we install Apache2 onto the server. For this we will use <b>PuTTy</b>.</p>
@@ -57,10 +57,10 @@
     <p>Puttygen should have been installed as part of the PuTTy package. Find and run the application.</p>
 
     <p>Click load</p>
-    <br><img src="images/putty_load.jpg">
+    <br><img src="images/putty_load.jpg" alt="instructions-image-8">
 
     <p>Find your <b>.pem</b> file. You will most likely have to change .ppk files to all files.</p>
-    <br><img src="images/ppk_all.jpg">
+    <br><img src="images/ppk_all.jpg" alt="instructions-image-9">
 
     <p>Click <b>save private key</b>.</p>
 
@@ -69,7 +69,7 @@
     <p>Next we will run the PuTTy application.</p>
 
     <p>on the left click the plus next to <b>SSH</b>, then click on <b>Auth</b>. Click browse and find the new .ppk file you created with PuTTygen.</p>
-    <br><img src="images/ssh_auth.jpg">
+    <br><img src="images/ssh_auth.jpg" alt="instructions-image-10">
 
     <p>Now click on session at the top and to the left. Under host name place your IP address for the server you created. Hopefully it is still copied! Click open and you will get a PuTTy security alert. Select <b>Accept</b>.</p>
 
@@ -101,17 +101,17 @@
     <p>Next we will install apache2</p>
 
     <p>Start with 'sudo apt update'</p>
-    <br><img src="images/apt_update.jpg">
+    <br><img src="images/apt_update.jpg" alt="instructions-image-11">
 
     <p>Next run 'sudo apt install apache2' and enter 'Y' when asked to continue.</p>
-    <br><img src="images/install_apache.jpg">
+    <br><img src="images/install_apache.jpg" alt="instructions-image-12">
 
     <p>From here we will restart and check the status of your apache2 server. Enter the following commands.</p>
 
     <p>'sudo systemctl restart apache2'</p>
 
     <p>'sudo systemctl status apache2'</p>
-    <br><img src="images/systemctl.jpg">
+    <br><img src="images/systemctl.jpg" alt="instructions-image-13"> 
 
     <p>You should see that your new server is active and running. To exit this dialog input <b>ctrl+C</b>.</p>
     <br><img src="images/status.jpg">
@@ -121,7 +121,7 @@
     <p>Type 'cd /var/www/html'</p>
 
     <p>type 'sudo git clone &#60github url&#62'</p>
-    <br><img src="images/git_clone.jpg">
+    <br><img src="images/git_clone.jpg" alt="instructions-image-14">
 
     <p>if you navigate to your ip address that was assigned earlier and add <b>/the name of your projects folder</b> you will be taken to the page.</p>
     <!-- probably an image -->
