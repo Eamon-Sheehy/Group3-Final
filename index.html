@@ -2,77 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Beginning Github Repository</title>
+<title>Webserver Guide using AWS</title>
 <link href="css/styles.css" type="text/css" rel="stylesheet">
 
 </head>
 
 <body>
-    
+
 
 
 
 <main>
 
-    <p>Welcome to the guide!
-    We will be walking you through the process of installing an AWS server.</p>
+    <p>Welcome to the guide! We will be walking you through the process of installing an AWS server.</p>
 
     <p>Begin by logging into you AWS account</p>
 
-    <p>Navigate to EC2</p>
-    <!-- probably an image --> 
+    <p>From the management console, navigate to <b>Launch a virtual machine with EC2</b></p>
+    <br><img src="images/management_console.jpg">
 
-    <p>Select instances from the left panel</p>
-
-    <p>Select Launch instances</p>
-    <!-- probably an image --> 
-
-    <p>Scroll to Ubuntu Server 20.04</p>
-    <!-- probably an image --> 
+    <p>Scroll down to to <b>Ubuntu Server 20.04</b> and click <b>select</b></b></p>
+    <br><img src="images/server_selection.jpg">
 
     <p>Select t2 (free tier in our case)</p>
+    <br><img src="images/tier_selection.jpg">
 
-    <p>Select Review and Launch</p>
-    <!-- probably an image --> 
+    <p>Select <b>Review and Launch</b></p>
 
-    <p>Click Launch</p>
+    <p>Click <b>Launch</b></p>
 
-    <p>Create new key pair, name the key someything memorable, click download. This will create a .pem file. Remember where you put it! We will use it later.</p>
-    <!-- probably an image --> 
+    <p>Create new key pair, name the key someything memorable, click <b>download</b>. This will create a .pem file. Remember where you put it! We will use it later.</p>
+    <br><img src="images/key_pair.jpg">
 
-    <p>Click Launch, then View instances on the bottom right</p>
+    <p>Click <b>Launch</b>, then <b>View instances</b> on the bottom right.</p>
 
-    <p>click the checkbox next to your new server. In the window below under Public IPv4 address click the copy image. You can keep this page open just in case you loose your IP that is copied. We will need this later on in this guide</p>
-    <!-- probably an image --> 
+    <p>Click the checkbox next to your new server. In the window below under <b>Public IPv4 address</b> click the copy image. You can keep this page open just in case you loose your IP that is copied. We will need this later on in this guide</p>
+    <br><img src="images/IPv4_address.jpg">
 
-    <p>Success! You have gotten your server up and running! You can access it by inputting the IP address into your browser. Next you need to connect to it. For this we will use Putty.</p>
+    <p>Next we will modify security settings to allow your server to be accessed. On the left hand panel navigate to <b>Security Groups.</b></p>
 
-    <p>install <a href="https://www.putty.org/">Putty</a>. You want the link at the top of the page.</p>
+    <p>Click on the secuity group ID of the new server. Most likely it will be named <b>launch-wizard-1</b>.
 
-    <p>open Puttygen. It should have been installed with the putty package.</p>
+    <p>On the top right click <b>actions</b> and select <b>inbound rules</b>.
+    <br><img src="images/actions.jpg">
 
-    <p>click load</p>
-    <!-- probably an image --> 
+    <p> Click <b>add rule</b> then change custom TCP to <b>HTTP</b>. In the search bar to the right, select <b>0.0.0.0/0</b>, save the rules and we can move on!</p>
+    <br><img src="images/inbound_rules.jpg">
 
-    <p>find your .pem file</p>
 
-    <p>click save private key</p>
-    <!-- probably an image --> 
+    <p>Success! You have gotten your server up and running! You can access it by inputting the IP address into your browser. At the moment nothing will show up until we install Apache2 onto the server. For this we will use <b>PuTTy</b>.</p>
 
-    <p>for simplicity name it the same as the .pem file</p>
+    <p>Install <a href="https://www.putty.org/">PuTTy</a>. You want the first link at the top of the page.</p>
 
-    <p>open Putty</p>
+    <p>Puttygen should have been installed as part of the PuTTy package. Find and run the application.</p>
 
-    <p>on the left click the plus next to SSH, then click on Auth. Click browse and find the new .ppk file you created with puttygen.</p>
-    <!-- probably an image --> 
+    <p>Click load</p>
+    <br><img src="images/putty_load.jpg">
 
-    <p>Now click on session on the top left. under host name place your IP address for the server you created. Hopefully it is still copied! Click open, and okay the next dialog box.</p>
-    <!-- probably an image --> 
+    <p>Find your <b>.pem</b> file. You will most likely have to change .ppk files to all files.</p>
+    <br><img src="images/ppk_all.jpg">
+
+    <p>Click <b>save private key</b>.</p>
+
+    <p>For simplicity name it the same as the <b>.pem</b> file. You can now close PuTTygen.</p>
+
+    <p>Next we will run the PuTTy application.</p>
+
+    <p>on the left click the plus next to <b>SSH</b>, then click on <b>Auth</b>. Click browse and find the new .ppk file you created with PuTTygen.</p>
+    <br><img src="images/ssh_auth.jpg">
+
+    <p>Now click on session at the top and to the left. Under host name place your IP address for the server you created. Hopefully it is still copied! Click open and you will get a PuTTy security alert. Select <b>Accept</b>.</p>
 
     <p>Since we made the server using ubuntu, your user name is 'ubuntu'
-    a list to user names based on operating system is provided below.</p>
-    
-    
+    a list to user names based on operating system is provided below if you want to use this guide again for another AMI.</p>
+
+
     <p>For Amazon Linux 2 or the Amazon Linux AMI, the user name is ec2-user.</p>
 
     <p>For a CentOS AMI, the user name is centos or ec2-user.</p>
@@ -96,35 +100,36 @@
 
     <p>Next we will install apache2</p>
 
-    <p>start with 'sudo apt update'</p>
+    <p>Start with 'sudo apt update'</p>
+    <br><img src="images/apt_update.jpg">
 
-    <p>next, 'sudo apt install apache2'</p>
-    <!-- probably an image --> 
+    <p>Next run 'sudo apt install apache2' and enter 'Y' when asked to continue.</p>
+    <br><img src="images/install_apache.jpg">
 
-    <p>restart and check the status of your apache2 server</p>
+    <p>From here we will restart and check the status of your apache2 server. Enter the following commands.</p>
 
     <p>'sudo systemctl restart apache2'</p>
 
-    <p>'sudo systelctl status apache2'</p>
-    <!-- probably an image --> 
+    <p>'sudo systemctl status apache2'</p>
+    <br><img src="images/systemctl.jpg">
 
-    <p>next we will navigate to your webroot folder</p>
-    
-    <p>type 'cd /var/www/html'</p>
-    <!-- probably an image --> 
+    <p>You should see that your new server is active and running. To exit this dialog input <b>ctrl+C</b>.</p>
+    <br><img src="images/status.jpg">
 
-    <p>now you can clone your github project to this destination and see it in real time.</p>
+    <p>Next we will navigate to your webroot folder and clone your github repo in to the folder.</p>
 
-    <p>type 'sudo git clone 'github repo url''</p>
-    <!-- probably an image --> 
+    <p>Type 'cd /var/www/html'</p>
 
-    <p>if you navigate to your ip address that was assigned earlier and add / the name of your projects folder you will be taken to the page.</p>
-    <!-- probably an image --> 
+    <p>type 'sudo git clone &#60github url&#62'</p>
+    <br><img src="images/git_clone.jpg">
 
-    <p>success!</p>
+    <p>if you navigate to your ip address that was assigned earlier and add <b>/the name of your projects folder</b> you will be taken to the page.</p>
+    <!-- probably an image -->
+
+    <p>Congratulations! You have successfully set up your own public server through AWS.</p>
 
 
-    
+
 </main>
 
 </body>
