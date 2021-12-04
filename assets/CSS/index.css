@@ -1,0 +1,111 @@
+*{
+    background-color: rgb(58, 58, 58);
+}
+
+/* style for text including the hover prompt over large images */
+h1{
+  display: none;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: azure;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: azure;
+}
+
+li{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: azure;
+}
+
+ul{
+     list-style:none;
+}
+
+a{
+  color: DarkTurquoise;
+}
+#welcome{
+  font-size: 50px;
+  font-weight: 300;
+}
+
+#congrats{
+  font-size: 25px;
+  font-weight: 600;
+}
+#congrats-invisible{
+  display: none;
+}
+
+
+
+.hover-prompt {
+  font-size: 10px;
+  font-weight: 100;
+  opacity: .5;
+  position: absolute;
+  top: 4px;
+  left: 16px;
+}
+
+/* style specifically for two instances of the hover prompt because they're positioned over text, making them hard to read at 50% opacity. */
+.over-text{
+  opacity: .8;
+}
+
+.image-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* style for the various sizes of images. Most fall into small, large, or wide category except
+for two images-- image 2 (ubuntu-image) because it's short while relatively wide
+and image 7 (inbound-image) because it's wide but taller than all the other wide images */
+.large-image:hover {
+    transform: scale(1.5);
+    position: relative;
+    left: 100px;
+}
+
+img:hover ~ .hover-prompt{
+    display: none;
+}
+
+.large-image{
+  width: 400px;
+}
+
+.wide-image{
+  width: 500px;
+}
+
+.small-image{
+  width: 250px;
+}
+
+#ubuntu-image:hover{
+  transform: scale(1.5);
+  position: relative;
+  left: 125px;
+}
+
+#inbound-image {
+    width: 600px;
+}
+
+#inbound-image:hover {
+    transform: scale(1.5);
+    position: relative;
+    left: 150px;
+}
