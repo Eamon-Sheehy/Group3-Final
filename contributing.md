@@ -22,7 +22,7 @@
 Welcome to Hello World! What you will find here is an open source project for group three in IT115. The project's goal is to gain experience creating code for web applications in an online collaborative process.
 
 # <a name="importantLinks">Important Links:</a><br>
-Project Pages: https://github.com/Eamon-Sheehy/Group3-Final
+Project Pages: https://github.com/Eamon-Sheehy/Group3-Final<br>
 Group Discord: https://discord.com/channels/895504852686360577/895504852686360579
 
 # <a name="rulesfortesting">Rules for Testing:</a><br>
@@ -95,8 +95,8 @@ https://contributor-covenant.org/version/1/3/0/[contributor-covenant.org/version
 
 
 # <a name="reportingBugs">Reporting Bugs:</a> <br>
--Bugs are tracked through Github and should be reported under the issues tab on the main repository
--Contributors should be notified an issue has been reported via the group discord.
+-Bugs are tracked through Github and should be reported under the issues tab on the main repository<br>
+-Contributors should be notified an issue has been reported via the group discord.<br>
 -Be Specific
 
 # <a name="thankyou">Thank You!</a> <br>
