@@ -8,13 +8,13 @@
 
 [3. Rules for testing](#rulesfortesting)
 
-[4. Guide on submitting changes] (#guide)
+[4. Guide on submitting changes](#guide)
 
 [5.  Bug reports](#reportingBugs)
 
-[6. Style guide/ Code of Conduct.] (#codeofconduct)
+[6. Style guide/ Code of Conduct.](#codeofconduct)
 
-[7. Thank you message] (#thankyou)
+[7. Thank you message](#thankyou)
 
 [8. List of contributors(us).](#contributors)
 
