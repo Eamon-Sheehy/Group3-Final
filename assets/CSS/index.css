@@ -47,46 +47,46 @@ area of the nav item */
 }
   
 /* style for text including the hover prompt over large images */
-h1{
+h1 {
   display: none;
 }
 
-h2{
+h2 {
   font-family: 'Montserrat', sans-serif;
   color: azure;
   font-weight: 300;
   font-size: 2em;
 }
 
-p{
+p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   color: azure;
 }
 
-li{
+li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   color: azure;
 }
 
-ul{
+ul {
      list-style:none;
 }
 
-a{
+a {
   color: DarkTurquoise;
 }
-#welcome{
+#welcome {
   font-size: 50px;
   font-weight: 300;
 }
 
-#congrats{
+#congrats {
   font-size: 25px;
   font-weight: 600;
 }
-#congrats-invisible{
+#congrats-invisible {
   display: none;
 }
 
@@ -102,7 +102,7 @@ a{
 }
 
 /* style specifically for two instances of the hover prompt because they're positioned over text, making them hard to read at 50% opacity. */
-.over-text{
+.over-text {
   opacity: .8;
 }
 
@@ -117,39 +117,39 @@ a{
 for two images-- image 2 (ubuntu-image) because it's short while relatively wide
 and image 7 (inbound-image) because it's wide but taller than all the other wide images */
 .large-image:hover {
-    transform: scale(1.5);
-    position: relative;
-    left: 100px;
+  transform: scale(1.5);
+  position: relative;
+  left: 100px;
 }
 
-img:hover ~ .hover-prompt{
-    display: none;
+img:hover ~ .hover-prompt {
+  display: none;
 }
 
-.large-image{
+.large-image {
   width: 400px;
 }
 
-.wide-image{
+.wide-image {
   width: 500px;
 }
 
-.small-image{
+.small-image {
   width: 250px;
 }
 
-#ubuntu-image:hover{
+#ubuntu-image:hover {
   transform: scale(1.5);
   position: relative;
   left: 125px;
 }
 
 #inbound-image {
-    width: 600px;
+  width: 600px;
 }
 
 #inbound-image:hover {
-    transform: scale(1.5);
-    position: relative;
-    left: 150px;
+  transform: scale(1.5);
+  position: relative;
+  left: 150px;
 }
