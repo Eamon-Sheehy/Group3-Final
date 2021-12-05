@@ -1,15 +1,62 @@
-*{
+* {
     background-color: rgb(58, 58, 58);
     
 }
+
 
 div#wrapper {
   /* 940px is the standard width for wrappers, and 
   margin:20px auto; centers the wrapper, if any containers are not inside the div id:wrapper, then they will not be affected by the limited
   940px width */
+  padding-top: 100px;
   width:1000px;
   margin: 200px auto 20px auto;
 }
+
+#primary ul {
+  /* This will span the nav bar across the screen and center
+  its contents */
+      
+     width: 1000px;
+     margin: 0 auto;
+     
+  }
+  
+  #primary li {
+      list-style-type:none;
+      float:left;
+      
+  /* This will create space between the nav items and
+  align them in the center of the nav container */
+      width:25%;
+      text-align:center;
+      font-size: 18px;
+      font-weight: bold;
+      font-style: italic;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  
+  #primary a {
+      text-decoration:none;
+      color:white;
+  /* Use display: Block so the hover will highlight the entire
+  area of the nav item */
+      display: block;
+      
+      padding-top: 25px;
+      padding-bottom: 25px;
+  }
+  
+  #primary a:hover {
+      background: #c77039;
+      color: white;
+  
+  }
+  
+
+
 
 /* style for text including the hover prompt over large images */
 h1{
