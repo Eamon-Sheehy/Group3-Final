@@ -28,7 +28,7 @@ align them in the center of the nav container */
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+  font-family: "Gill Sans MT";
 }
   
 /* style for text including the hover prompt over large images */
