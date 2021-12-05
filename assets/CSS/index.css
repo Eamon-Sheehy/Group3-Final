@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(58 58 58);
 }
 
 /* 940px is the standard width for wrappers, and margin:20px auto; centers the wrapper, 
@@ -28,7 +28,7 @@ align them in the center of the nav container */
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  font-family: "Gill Sans MT";
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
   
 /* style for text including the hover prompt over large images */
@@ -56,11 +56,11 @@ li {
 }
 
 ul {
-  list-style:none;
+  list-style: none;
 }
 
 a {
-  color: Darkturquoise;
+  color: darkturquoise;
 }
 
 /* Use display: Block so the hover will highlight the entire
