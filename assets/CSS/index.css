@@ -2,13 +2,12 @@
   background-color: rgb(58, 58, 58);
 }
 
-/* 940px is the standard width for wrappers, and margin:20px auto; centers the wrapper, 
-if any containers are not inside the div id:wrapper, then they will not be affected by the limited
+/* 940px is the standard width for wrappers, and margin:20px auto; centers the wrapper, if any containers are not inside the div id:wrapper, then they will not be affected by the limited
 940px width */
 div#wrapper {
   padding-top: 100px;
   width: 1000px;
-  margin: 200px auto 20px auto;
+  margin: 200px auto 20px;
 }
 
 /* This will span the nav bar across the screen and center
