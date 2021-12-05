@@ -1,5 +1,14 @@
 *{
     background-color: rgb(58, 58, 58);
+    
+}
+
+div#wrapper {
+  /* 940px is the standard width for wrappers, and 
+  margin:20px auto; centers the wrapper, if any containers are not inside the div id:wrapper, then they will not be affected by the limited
+  940px width */
+  width:1000px;
+  margin: 200px auto 20px auto;
 }
 
 /* style for text including the hover prompt over large images */
