@@ -2,33 +2,20 @@
   background-color: rgb(58 58 58);
 }
 
+main {
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  background: rgb(246, 92, 20);
+}
+
 /* 940px is the standard width for wrappers, and margin:20px auto; centers the wrapper, 
 if any containers are not inside the div id:wrapper, then they will not be affected by the limited
 940px width */
 div#wrapper {
-  padding-top: 100px;
   width: 1000px;
-  margin: 200px auto 20px;
-}
-
-/* This will span the nav bar across the screen and center
-its contents */
-#primary ul {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-/* This will create space between the nav items and
-align them in the center of the nav container */ 
-#primary li {
-  list-style-type: none;
-  float: left;
-  width: 25%;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: italic;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 200px auto;
 }
   
 /* style for text including the hover prompt over large images */
@@ -63,24 +50,10 @@ a {
   color: darkturquoise;
 }
 
-/* Use display: Block so the hover will highlight the entire
-area of the nav item */  
-#primary a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-  
-#primary a:hover {
-  background: #c77039;
-  color: white;
-}
-
 #welcome {
   font-size: 50px;
   font-weight: 300;
+  padding: 20px;
 }
 
 #congrats {
@@ -99,6 +72,15 @@ area of the nav item */
   position: absolute;
   top: 4px;
   left: 16px;
+}
+
+.aws-server, .putty, .apache2 {
+  background: rgb(246, 92, 20);
+  padding-left: 30px;
+}
+
+p, h2, li, ul, b {
+  background: rgb(246, 92, 20);
 }
 
 /* style specifically for two instances of the hover prompt because they're positioned over text,
