@@ -1,4 +1,4 @@
-body {
+* {
   background-color: white;
 }
 
@@ -15,7 +15,7 @@ if any containers are not inside the div id:wrapper, then they will not be affec
 940px width */
 div#wrapper {
   width: 1000px;
-  margin: 200px auto;
+  margin: 40px auto;
 }
   
 /* style for text including the hover prompt over large images */
