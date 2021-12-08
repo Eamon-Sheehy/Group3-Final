@@ -26,6 +26,7 @@ Project Pages: https://github.com/Eamon-Sheehy/Group3-Final<br>
 Group Discord: https://discord.com/channels/895504852686360577/895504852686360579
 
 # <a name="rulesfortesting">Rules for Testing:</a><br>
+Run a pull request to commit a new branch. The Github Action Superlinter will run to test the code. Fix any error codes before merging with the main branch.
 
 # <a name="guide">Guide for Submiting Changes:</a><br>
 
