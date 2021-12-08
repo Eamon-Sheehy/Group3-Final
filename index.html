@@ -25,59 +25,59 @@
       <h2>Fire up your AWS server</h2>
       <p>Begin by logging into your AWS account.</p>
 
-      <p>From the management console, navigate to <b>Launch a virtual machine with EC2</b>.</p>
+      <p>From the AWS Management Console, navigate to <b>Launch a virtual machine with EC2</b>.</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/management_console.jpg" alt="instructions-image-1" class="large-image">
-        <p class="hover-prompt">hover to expand</p>
+        <p class="hover-prompt">Hover to expand</p>
       </div>
 
-      <p>Scroll down to to <b>Ubuntu Server 20.04</b> and click <b>select</b></p>
+      <p>Scroll down to to <b>Ubuntu Server 20.04</b> and click <b>Select</b></p>
       <br>
       <div class="image-container">
         <img src="./assets/images/server_selection.jpg" alt="instructions-image-2" class="wide-image" id="ubuntu-image">
-        <p class="hover-prompt">hover to expand</p>
+        <p class="hover-prompt">Hover to expand</p>
       </div>
 
       <p>Select t2 (free tier in our case)</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/tier_selection.jpg" alt="instructions-image-3" class="large-image">
-        <p class="hover-prompt over-text">hover to expand</p>
+        <p class="hover-prompt over-text">Hover to expand</p>
       </div>
 
       <p>Select <b>Review and Launch</b>. Click <b>Launch</b>.</p>
 
-      <p>Create new key pair, name the key someything memorable, click <b>download</b>. This will create a .pem file. Remember where you put it! We will use it later.</p>
+      <p>Create new key pair, name the key something memorable, click <b>download</b>. This will create a .pem file. Remember where you put it! We will use it later.</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/key_pair.jpg" alt="instructions-image-4" class="large-image">
-        <p class="hover-prompt  over-text">hover to expand</p>
+        <p class="hover-prompt  over-text">Hover to expand</p>
       </div>
 
       <p>Click <b>Launch</b>, then <b>View instances</b> on the bottom right.</p>
 
-      <p>Click the checkbox next to your new server. In the window below under <b>Public IPv4 address</b> click the copy image. You can keep this page open just in case you loose your IP that is copied. We will need this later on in this guide</p>
+      <p>Click the checkbox next to your new server. In the window below under <b>Public IPv4 address</b> click the copy image. You can keep this page open just in case you lose your IP that is copied. We will need this later on in this guide</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/IPv4_address.jpg" alt="instructions-image-5" class="large-image">
-        <p class="hover-prompt">hover to expand</p>
+        <p class="hover-prompt">Hover to expand</p>
       </div>
 
       <p>Next we will modify security settings to allow your server to be accessed.</p>
 
       <p>On the left hand panel navigate to <b>Security Groups.</b></p>
-      <p>Click on the secuity group ID of the new server. Most likely it will be named <b>launch-wizard-1</b>.</p>
-      <p>On the top right click <b>actions</b> and select <b>inbound rules</b>.</p>
+      <p>Click on the Security Group ID of the new server. Most likely it will be named <b>launch-wizard-1</b>.</p>
+      <p>On the top right click <b>Actions</b> and select <b> Edit inbound rules</b>.</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/actions.jpg" alt="instructions-image-6" class="small-image">
       </div>
-      <p> Click <b>add rule</b> then change custom TCP to <b>HTTP</b>. In the search bar to the right, select <b>0.0.0.0/0</b>, save the rules and we can move on!</p>
+      <p> Click <b>Add rule</b> then change custom TCP to <b>HTTP</b>. In the search bar to the right, select <b>0.0.0.0/0</b>, click Save rules and we can move on!</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/inbound_rules.jpg" alt="instructions-image-7" id="inbound-image">
-        <p class="hover-prompt">hover to expand</p>
+        <p class="hover-prompt">Hover to expand</p>
       </div>
 
       <p>Success! You have gotten your server up and running! You can access it by inputting the IP address into your browser. At the moment nothing will show up until we install Apache2 onto the server. For this we will use <b>PuTTy</b>.</p>
@@ -90,7 +90,7 @@
 
       <p>Puttygen should have been installed as part of the PuTTy package. Find and run the application.</p>
 
-      <p>Click load</p>
+      <p>Click Load</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/putty_load.jpg" alt="instructions-image-8" class="large-image">
@@ -103,20 +103,20 @@
         <img src="./assets/images/ppk_all.jpg" alt="instructions-image-9" class="small-image">
       </div>
 
-      <p>Click <b>save private key</b>.</p>
+      <p>Click <b>Save private key</b>.</p>
 
       <p>For simplicity name it the same as the <b>.pem</b> file. You can now close PuTTygen.</p>
 
       <p class="section-header">Next we will run the PuTTy application.</p>
 
-      <p>on the left click the plus next to <b>SSH</b>, then click on <b>Auth</b>. Click browse and find the new .ppk file you created with PuTTygen.</p>
+      <p>On the left, click the plus next to <b>SSH</b>, then click on <b>Auth</b>. Click Browse and find the new .ppk file you created with PuTTygen.</p>
       <br>
       <div class="image-container">
         <img src="./assets/images/ssh_auth.jpg" alt="instructions-image-10" class="large-image">
-        <p class="hover-prompt">hover to expand</p>
+        <p class="hover-prompt">Hover to expand</p>
       </div>
 
-      <p>Now click on session at the top and to the left. Under host name place your IP address for the server you created. Hopefully it is still copied! Click open and you will get a PuTTy security alert. Select <b>Accept</b>.</p>
+      <p>Now click on session at the top and to the left. Under host name place your IP address for the server you created. Hopefully it is still copied! Click Open and you will get a PuTTy security alert. Select <b>Accept</b>.</p>
 
       <p>Since we made the server using ubuntu, your user name is 'ubuntu'
       a list to user names based on operating system is provided below if you want to use this guide again for another AMI.</p>
@@ -176,7 +176,7 @@
         <img src="./assets/images/git_clone.jpg" alt="instructions-image-15" class="wide-image">
       </div>
 
-      <p>if you navigate to your ip address that was assigned earlier and add <b>/the name of your projects folder</b> you will be taken to the page.</p>
+      <p>If you navigate to your ip address that was assigned earlier and add <b>/the name of your projects folder</b> you will be taken to the page.</p>
       <!-- probably an image -->
     </div>
 
