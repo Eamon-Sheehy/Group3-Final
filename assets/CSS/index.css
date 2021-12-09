@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  
 }
 
 main {
@@ -8,6 +9,7 @@ main {
   margin-bottom: 40px;
   border-radius: 5px;
   background-color: rgb(58 58 58);
+  
 }
 
 /* 940px is the standard width for wrappers, and margin:20px auto; centers the wrapper, 
